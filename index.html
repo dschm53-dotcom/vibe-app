@@ -26,7 +26,7 @@
     body { background: var(--bg); color: var(--text); font-family: 'Nunito',sans-serif; overflow-x: hidden; line-height: 1.6; }
     nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 5%; height:68px; background:rgba(10,10,10,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
     .nav-logo { display:flex; align-items:center; gap:10px; font-size:1.4rem; font-weight:900; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .logo-icon { width:34px; height:34px; background:var(--grad); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; -webkit-text-fill-color:white; }
+    .logo-icon { width:34px; height:34px; border-radius:10px; object-fit:cover; }
     .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
     .nav-links a { color:var(--text-70); text-decoration:none; font-size:0.9rem; font-weight:600; transition:color 0.2s; }
     .nav-links a:hover { color:var(--text); }
@@ -164,7 +164,7 @@
 </head>
 <body>
   <nav id="navbar">
-    <div class="nav-logo"><div class="logo-icon" style="-webkit-text-fill-color:white;font-size:0.7rem;font-weight:900;letter-spacing:-1px;">VM</div>Vibemap</div>
+    <div class="nav-logo"><img src="logo.png" class="logo-icon" alt="Logo">Vibemap</div>
     <ul class="nav-links">
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#territory">Place Ownership</a></li>
@@ -361,7 +361,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="nav-logo"><div class="logo-icon" style="-webkit-text-fill-color:white;font-size:0.7rem;font-weight:900;letter-spacing:-1px;">VM</div>Vibemap</div>
+        <div class="nav-logo"><img src="logo.png" class="logo-icon" alt="Logo">Vibemap</div>
         <p>The Vibemap community turns every place into a living story. Check in, post photos, and compete for the places you love.</p>
       </div>
       <div class="footer-col">
