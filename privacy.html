@@ -2,113 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Vibe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Vibemap</title>
+  <meta name="description" content="Privacy Policy for Vibemap, developed by Darcy. Learn how we collect, use, and protect your data."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg:#0A0A0A; --surface:#111111; --card:#1A1A1A; --border:rgba(255,255,255,0.08); --pink:#FF2D6B; --grad:linear-gradient(135deg,#FF2D6B 0%,#C026D3 50%,#7C3AED 100%); --text:#FFFFFF; --text-70:rgba(255,255,255,0.7); --text-40:rgba(255,255,255,0.4); }
-    body { background:var(--bg); color:var(--text); font-family:'Nunito',sans-serif; line-height:1.7; }
-    nav { display:flex; align-items:center; justify-content:space-between; padding:0 5%; height:68px; background:rgba(10,10,10,0.95); border-bottom:1px solid var(--border); }
-    .nav-logo { display:flex; align-items:center; gap:10px; font-size:1.4rem; font-weight:900; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-decoration:none; }
-    .logo-icon { width:34px; height:34px; border-radius:10px; object-fit:cover; }
-    .back-link { color:var(--text-40); text-decoration:none; font-size:0.9rem; font-weight:600; transition:color 0.2s; }
-    .back-link:hover { color:var(--text); }
-    .page-hero { background:var(--surface); padding:60px 5% 48px; border-bottom:1px solid var(--border); }
-    .page-hero span { display:inline-block; font-size:0.75rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--pink); margin-bottom:12px; }
-    .page-hero h1 { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; letter-spacing:-1px; }
-    .page-hero p { color:var(--text-40); font-size:0.9rem; margin-top:8px; font-weight:500; }
-    .content { max-width:780px; margin:0 auto; padding:60px 5% 100px; }
-    h2 { font-size:1.15rem; font-weight:800; margin:36px 0 12px; color:var(--text); }
-    p, li { font-size:0.95rem; color:var(--text-70); margin-bottom:12px; font-weight:500; }
-    ul { padding-left:20px; margin-bottom:12px; }
-    li { margin-bottom:6px; }
-    a { color:var(--pink); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .divider { border:none; border-top:1px solid var(--border); margin:32px 0; }
-    footer { background:var(--surface); border-top:1px solid var(--border); padding:32px 5%; text-align:center; }
-    footer p { font-size:0.82rem; color:var(--text-40); font-weight:500; }
-    footer a { color:var(--text-40); text-decoration:none; margin:0 12px; }
-    footer a:hover { color:var(--text-70); }
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: #1e1e2e;
+      --accent: #7c5cfc;
+      --accent-glow: rgba(124, 92, 252, 0.15);
+      --text: #e8e8f0;
+      --text-muted: #8888aa;
+      --gradient: linear-gradient(135deg, #7c5cfc 0%, #c77dff 100%);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 800px; margin: 0 auto; height: 64px; display: flex; align-items: center; gap: 12px; }
+    .logo { width: 36px; height: 36px; background: var(--gradient); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .header-inner h1 { font-size: 18px; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .badge { margin-left: auto; font-size: 11px; color: var(--text-muted); background: var(--border); padding: 4px 10px; border-radius: 999px; font-weight: 500; }
+    .hero { padding: 64px 24px 40px; text-align: center; }
+    .hero h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; margin-bottom: 12px; }
+    .hero p { color: var(--text-muted); font-size: 16px; max-width: 520px; margin: 0 auto; }
+    .hero .updated { display: inline-block; margin-top: 20px; font-size: 13px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 16px; }
+    main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+    section { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 20px; transition: border-color 0.2s; }
+    section:hover { border-color: rgba(124, 92, 252, 0.3); }
+    section h3 { font-size: 18px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .icon { width: 32px; height: 32px; background: var(--accent-glow); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    p { color: var(--text-muted); margin-bottom: 12px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; margin: 12px 0; }
+    ul li { color: var(--text-muted); font-size: 15px; padding: 6px 0 6px 20px; position: relative; }
+    ul li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-card { background: var(--accent-glow); border: 1px solid rgba(124, 92, 252, 0.3); border-radius: 16px; padding: 32px; text-align: center; margin-bottom: 20px; }
+    .contact-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; justify-content: center; }
+    .contact-card p { margin-bottom: 20px; }
+    .contact-card a.btn { display: inline-block; background: var(--gradient); color: #fff; padding: 12px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
+    .contact-card a.btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); }
+    footer a { color: var(--accent); }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html" class="nav-logo"><img src="logo.png" class="logo-icon" alt="Logo">Vibemap</a>
-    <a href="index.html" class="back-link">← Back to Home</a>
-  </nav>
-  <div class="page-hero">
-    <span>Legal</span>
-    <h1>Privacy Policy</h1>
-    <p>Last updated: 1 September 2025</p>
+<header>
+  <div class="header-inner">
+    <div class="logo">🗺️</div>
+    <h1>Vibemap</h1>
+    <span class="badge">Privacy Policy</span>
   </div>
-  <div class="content">
-    <p>This Privacy Policy describes how Vibemap ("we", "us", or "our") collects, uses, and shares information about you when you use our mobile application and website (collectively, the "Services"). By using our Services, you agree to the collection and use of information in accordance with this policy.</p>
-
-    <h2>1. Information We Collect</h2>
-    <p><strong>Account Information:</strong> When you create an account, we collect your username, email address, and optionally your profile photo and display name.</p>
-    <p><strong>Location Data:</strong> With your permission, we collect location information when you check in or post a photo. We apply location jittering to protect your precise location. You may also define a Private Area in settings to prevent any check-ins from being recorded within that zone.</p>
-    <p><strong>Photos and Content:</strong> Photos and vibes you post are stored on our servers. Photos posted to the map are automatically deleted after 7 days unless explicitly saved to your profile.</p>
-    <p><strong>Usage Data:</strong> We collect information about how you interact with the Services, including the features you use, pages you view, and actions you take.</p>
-    <p><strong>Device Information:</strong> We may collect device identifiers, operating system information, and push notification tokens to deliver notifications.</p>
-
-    <h2>2. How We Use Your Information</h2>
+</header>
+<div class="hero">
+  <h2>Privacy Policy</h2>
+  <p>How <strong>Vibemap</strong> collects, uses, and protects your personal information.</p>
+  <span class="updated">Last updated: October 2026</span>
+</div>
+<main>
+  <section>
+    <h3><span class="icon">👤</span> Who We Are</h3>
+    <p><strong>Vibemap</strong> is a mobile application developed by <strong>Darcy</strong>. If you have any questions about this policy, you can contact us at <a href="mailto:vibemap101@gmail.com">vibemap101@gmail.com</a>.</p>
+    <p>This Privacy Policy describes how Vibemap ("we", "us", or "our") collects, uses, and shares information about you when you use our mobile application, Vibemap, available on the Google Play Store and Apple App Store.</p>
+  </section>
+  <section>
+    <h3><span class="icon">📦</span> Information We Collect</h3>
+    <p>We collect the following types of information to provide and improve the Vibemap service:</p>
+    <strong>Account Information</strong>
     <ul>
-      <li>To operate and improve the Services</li>
-      <li>To personalise your experience and show you relevant content</li>
-      <li>To send you push notifications (which you can disable at any time in device settings)</li>
-      <li>To facilitate territory leaderboards and competitive features</li>
-      <li>To process business verification claims</li>
-      <li>To comply with legal obligations</li>
-      <li>To detect and prevent fraud, abuse, and security incidents</li>
+      <li>Email address (used to create and manage your account)</li>
+      <li>Password (stored securely and never readable by us)</li>
+      <li>Display name and profile photo (optional, chosen by you)</li>
     </ul>
-
-    <h2>3. Sharing Your Information</h2>
-    <p>We do not sell your personal information. We may share your information with:</p>
+    <strong>Location Data</strong>
     <ul>
-      <li><strong>Service Providers:</strong> Third-party companies that help us operate the Services (e.g. cloud hosting, analytics, push notification delivery). These providers are contractually required to protect your information.</li>
-      <li><strong>Other Users:</strong> Your username, profile photo, public posts, and territory activities are visible to other users in accordance with your privacy settings.</li>
-      <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+      <li>Precise GPS location while using the app, to power the live map and vibe features</li>
+      <li>Location is only collected when the app is in use (foreground only)</li>
     </ul>
-
-    <h2>4. Third-Party Services</h2>
-    <p>Our Services integrate with third-party services including:</p>
+    <strong>Photos and Camera</strong>
     <ul>
-      <li><strong>Google Maps / Places API:</strong> Used for location autocomplete and place data. Subject to Google's Privacy Policy.</li>
-      <li><strong>Firebase (Google):</strong> Used for push notifications and analytics.</li>
-      <li><strong>Supabase:</strong> Used for database and authentication infrastructure.</li>
-      <li><strong>Stripe:</strong> Used for processing business subscription payments. We do not store your payment card details — Stripe handles all payment processing. Subject to Stripe's Privacy Policy.</li>
+      <li>Photos you choose to capture or upload for posts and your profile</li>
+      <li>Camera access is only used when you actively take a photo within the app</li>
     </ul>
-
-    <h2>5. Data Retention</h2>
-    <p>We retain your information for as long as your account is active or as needed to provide you with the Services. Map photos are automatically deleted after 7 days. You may delete your account at any time from the Settings screen, which will result in the permanent deletion of your personal data within 30 days.</p>
-
-    <h2>6. Your Rights</h2>
-    <p>Depending on your location, you may have rights to access, correct, delete, or export your personal data. To exercise any of these rights, contact us at <a href="mailto:vibemap101@gmail.com">vibemap101@gmail.com</a>.</p>
-
-    <h2>7. Children's Privacy</h2>
-    <p>Our Services are not directed to children under the age of 13 (or 16 in some jurisdictions). We do not knowingly collect personal information from children. If we become aware that we have collected information from a child without parental consent, we will take steps to delete that information.</p>
-
-    <h2>8. Security</h2>
-    <p>We implement industry-standard security measures to protect your information. However, no method of transmission over the internet or electronic storage is 100% secure. We encourage you to use a strong, unique password for your account.</p>
-
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date. Your continued use of the Services after any changes constitutes your acceptance of the new policy.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:vibemap101@gmail.com">vibemap101@gmail.com</a> or by mail at: Vibe, Brisbane, Queensland, Australia.</p>
-
-    <hr class="divider" />
-    <p style="font-size:0.82rem;color:var(--text-40);">This policy is governed by the laws of Queensland, Australia.</p>
+    <strong>Contacts</strong>
+    <ul>
+      <li>Your device contacts, used only to help you find and add friends within Vibemap</li>
+      <li>Contact data is not stored on our servers without your explicit action</li>
+    </ul>
+    <strong>Usage &amp; Analytics</strong>
+    <ul>
+      <li>Anonymous app usage data via Firebase Analytics to help us improve the app</li>
+      <li>Crash reports and performance data</li>
+    </ul>
+    <strong>Device Information</strong>
+    <ul>
+      <li>Push notification token (Firebase Cloud Messaging) to send you notifications</li>
+      <li>Device timezone, used for scheduling local notifications at the correct time</li>
+    </ul>
+  </section>
+  <section>
+    <h3><span class="icon">🔧</span> How We Use Your Information</h3>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Create and manage your Vibemap account</li>
+      <li>Power the live map and social features of the app</li>
+      <li>Send you push notifications about activity relevant to you (e.g., friend requests)</li>
+      <li>Improve and personalise the app experience</li>
+      <li>Detect and prevent fraud and abuse</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <p>We do <strong>not</strong> sell your personal information to third parties.</p>
+  </section>
+  <section>
+    <h3><span class="icon">🤝</span> Information We Share</h3>
+    <p>We share your information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Supabase</strong> – Our backend database and authentication provider. Your account data is stored securely on Supabase servers.</li>
+      <li><strong>Firebase (Google)</strong> – Used for push notifications and anonymous analytics.</li>
+      <li><strong>Other users</strong> – Your display name, profile photo, and public posts are visible to other Vibemap users, as intended by the social features of the app.</li>
+      <li><strong>Legal requirements</strong> – We may disclose your information if required by law or to protect our rights.</li>
+    </ul>
+  </section>
+  <section>
+    <h3><span class="icon">🔒</span> Data Security</h3>
+    <p>We take data security seriously. Your password is never stored in plain text — authentication is handled by Supabase's industry-standard secure auth system. All data is transmitted over encrypted HTTPS connections.</p>
+    <p>While we strive to protect your data, no method of transmission or storage is 100% secure. If you believe your account has been compromised, please contact us immediately at <a href="mailto:vibemap101@gmail.com">vibemap101@gmail.com</a>.</p>
+  </section>
+  <section>
+    <h3><span class="icon">🧒</span> Children's Privacy</h3>
+    <p>Vibemap is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+  </section>
+  <section>
+    <h3><span class="icon">🌍</span> Data Retention &amp; Your Rights</h3>
+    <p>We retain your personal data for as long as your account is active. You have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your account and all associated data</li>
+      <li>Withdraw consent for optional data collection at any time</li>
+    </ul>
+    <p>To exercise any of these rights, or to request account deletion, please visit our <a href="./account-deletion.html">Account Deletion page</a> or email us at <a href="mailto:vibemap101@gmail.com">vibemap101@gmail.com</a>.</p>
+  </section>
+  <section>
+    <h3><span class="icon">📝</span> Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this page periodically to stay informed.</p>
+  </section>
+  <div class="contact-card">
+    <h3>Questions or Concerns?</h3>
+    <p>If you have any questions about this Privacy Policy or how your data is handled, please don't hesitate to reach out.</p>
+    <a class="btn" href="mailto:vibemap101@gmail.com">Contact Us at vibemap101@gmail.com</a>
   </div>
-  <footer>
-    <p>
-      © 2025 Vibemap. All rights reserved. &nbsp;|&nbsp;
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="mailto:vibemap101@gmail.com">Contact</a>
-    </p>
-  </footer>
+</main>
+<footer>
+  <p>&copy; 2026 Vibemap by Darcy. All rights reserved. &nbsp;·&nbsp; <a href="./account-deletion.html">Account Deletion</a></p>
+</footer>
 </body>
 </html>
